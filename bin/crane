@@ -8,14 +8,25 @@ foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php
     }
 }
 
-const ME = 'crane';
+const VERSION = "v0.0.2";
+const ME = "crane";
+
+const LOGO = <<<STR
+ ####  #####    ##   #    # ###### 
+#    # #    #  #  #  ##   # #      
+#      #    # #    # # #  # #####  
+#      #####  ###### #  # # #      
+#    # #   #  #    # #   ## #      
+ ####  #    # #    # #    # ######
+STR;
 
 if (php_sapi_name() !== 'cli') {
     throw new \Error("Please run from command line.");
 }
 
 if (count($argv) !== 3 || $argv[1] !== "new") {
-    echo "Invalid Command." . PHP_EOL . PHP_EOL;
+    echo LOGO . PHP_EOL . PHP_EOL;
+    echo VERSION . PHP_EOL . PHP_EOL;
     echo "Usage" . PHP_EOL . PHP_EOL;
     echo ME . " new appname" . PHP_EOL;
     exit;
@@ -43,7 +54,7 @@ if (isEmptyFolder($folder)) {
         mkdir("public");
         mkdir("routes");
 
-        mkdir("views/errors", 0777, true);        
+        mkdir("views/errors", 0777, true);
 
         copy(__DIR__ . "/../copy/views/errors/404.php", "./views/errors/404.php");
         copy(__DIR__ . "/../copy/.env", ".env");
@@ -52,12 +63,17 @@ if (isEmptyFolder($folder)) {
         copy(__DIR__ . "/../copy/composer.json", "composer.json");
         copy(__DIR__ . "/../copy/index.php", "index.php");
 
-        system("composer install");
+        $output = system("composer install");
+
+
+        echo PHP_EOL . PHP_EOL;
+        echo "Type `cd $folder` and begin building your website.";
+        echo PHP_EOL;
     } else {
         echo "Failed to change directory." . PHP_EOL;
     }
 } else {
-    echo "Folder is empty." . PHP_EOL;
+    echo "The folder $folder already exists." . PHP_EOL;
     exit;
 }
 
