@@ -1,0 +1,11 @@
+{            
+    "require": {
+        "php" : ">=7.0.0",
+        "phpmailer/phpmailer": ">=6.5",
+        "qorm/qorm" : "*",
+        "chase/orchid": "*",
+        "chase/helga": "*",
+        "chase/figleaf": "*",
+        "chase/safari" : "*"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "crane/installer",
+    "description": "Application installer for the crane framework",    
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Robert",
+            "email": "paul.contrib@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "bin": [
+        "bin/crane"
+    ]
+}
