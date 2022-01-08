@@ -7,8 +7,7 @@
             "name": "Paul Robert",
             "email": "paul.contrib@gmail.com"
         }
-    ],
-    "minimum-stability": "dev",
+    ],    
     "require": {},
     "bin": [
         "bin/crane"
