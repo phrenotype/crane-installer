@@ -1,4 +1,9 @@
 {            
+    "autoload": {
+        "psr-4": {
+            "forms\\" : "forms/"
+        }
+    },
     "require": {
         "php" : ">=7.0.0",
         "phpmailer/phpmailer": "*",
