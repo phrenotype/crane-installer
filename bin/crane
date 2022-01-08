@@ -8,15 +8,16 @@ foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php
     }
 }
 
+const ME = 'crane';
 
 if (php_sapi_name() !== 'cli') {
     throw new \Error("Please run from command line.");
 }
 
 if (count($argv) !== 3 || $argv[1] !== "new") {
-    echo "Invalid Syntax." . PHP_EOL;
-    echo "Usage" . PHP_EOL;
-    echo "orchid new appname" . PHP_EOL;
+    echo "Invalid Command." . PHP_EOL . PHP_EOL;
+    echo "Usage" . PHP_EOL . PHP_EOL;
+    echo ME . " new appname" . PHP_EOL;
     exit;
 }
 
