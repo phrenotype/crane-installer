@@ -66,10 +66,12 @@ if (isEmptyFolder($folder)) {
 
         $output = system("composer install");
 
-
         echo PHP_EOL . PHP_EOL;
-        echo "Type `cd $folder` and begin building your website.";
-        echo PHP_EOL;
+
+        if ($folder !== '.') {
+            echo "Type `cd $folder` and begin building your website.";
+            echo PHP_EOL;
+        }
     } else {
         echo "Failed to change directory." . PHP_EOL;
     }
@@ -81,5 +83,6 @@ if (isEmptyFolder($folder)) {
 
 function isEmptyFolder($dir)
 {
+    if ($dir === '.') return true;
     return (count(scandir($dir)) == 2);
 }
