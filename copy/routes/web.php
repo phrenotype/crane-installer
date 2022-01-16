@@ -5,6 +5,7 @@
 use controllers\PagesController;
 
 /*
+
 $app->get("/", [WebController::class, 'method']);
 
 $app->get("/", function($request, $response){
