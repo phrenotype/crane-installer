@@ -23,6 +23,7 @@ $app->static('public');
 Module::import('middleware');
 Module::import('routes');
 Module::import('controllers');
+Module::import('forms');
 
 
 $app->run($_SERVER['REQUEST_URI']);
