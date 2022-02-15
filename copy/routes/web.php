@@ -2,7 +2,7 @@
 
 // Routes for regular web pages
 
-use controllers\PagesController;
+use controllers\web\PagesController;
 
 /*
 

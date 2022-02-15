@@ -1,6 +1,6 @@
 <?php
 
-namespace controllers;
+namespace controllers\web;
 
 use Crane\Router\Request;
 use Crane\Router\Response;
