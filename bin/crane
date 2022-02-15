@@ -52,7 +52,7 @@ if (isEmptyFolder($folder)) {
         mkdir("controllers/api");
         mkdir("controllers/middleware");
 
-        copy(__DIR__ . "/../copy/controllers/web/PagesController.php", "controllers/PagesController.php");
+        copy(__DIR__ . "/../copy/controllers/web/PagesController.php", "controllers/web/PagesController.php");
 
         mkdir("forms");
         mkdir("middleware");
