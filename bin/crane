@@ -54,13 +54,13 @@ if (isEmptyFolder($folder)) {
 
         copy(__DIR__ . "/../copy/controllers/web/PagesController.php", "controllers/web/PagesController.php");
 
-        mkdir("forms");
-        mkdir("middleware");
+        mkdir("forms");        
         mkdir("migrations");
         mkdir("models");
         mkdir("public");
 
         mkdir("routes");
+        mkdir("routes/middleware");
         copy(__DIR__ . "/../copy/routes/web.php", "routes/web.php");
         copy(__DIR__ . "/../copy/routes/api.php", "routes/api.php");
 
