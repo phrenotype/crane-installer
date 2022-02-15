@@ -48,7 +48,11 @@ if (isEmptyFolder($folder)) {
     if ($changed) {
 
         mkdir("controllers");
-        copy(__DIR__ . "/../copy/controllers/PagesController.php", "controllers/PagesController.php");
+        mkdir("controllers/web");
+        mkdir("controllers/api");
+        mkdir("controllers/middleware");
+
+        copy(__DIR__ . "/../copy/controllers/web/PagesController.php", "controllers/PagesController.php");
 
         mkdir("forms");
         mkdir("middleware");
