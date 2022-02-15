@@ -18,9 +18,6 @@ $app->startSession('session');
 
 $app->static('public');
 
-
-
-Module::import('middleware');
 Module::import('routes');
 Module::import('controllers');
 Module::import('forms');
