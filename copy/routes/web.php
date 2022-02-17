@@ -9,7 +9,7 @@ use controllers\web\PagesController;
 $app->get("/", [WebController::class, 'method']);
 
 $app->get("/", function($request, $response){
-    return $response->send("CRANE");
+    return $response->generic("CRANE");
 });
 
 */
