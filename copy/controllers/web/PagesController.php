@@ -8,6 +8,6 @@ use Crane\Router\Response;
 class PagesController {
 
     public function index(Request $req, Response $resp){
-        return $resp->generic('pages/home.php');
+        return $resp->respond('pages/home.php');
     }
 }
