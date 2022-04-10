@@ -14,12 +14,15 @@ $app = new App($_REQUEST, $_SERVER);
 
 $app->displayErrors(true);
 $app->logErrors(true);
-$app->startSession('session');
+$app->startSession('Session9563ewqe1e16e5a789db64819739ae');
+$app->timezone('Africa/Lagos');
 
 $app->static('public');
 
-Module::import('routes');
+// Controllers must come before routes
 Module::import('controllers');
+
+Module::import('routes');
 Module::import('forms');
 
 
