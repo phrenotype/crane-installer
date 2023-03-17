@@ -8,7 +8,7 @@ foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php
     }
 }
 
-const VERSION = "v0.0.2";
+const VERSION = "v0.0.3";
 const ME = "crane";
 
 const LOGO = <<<STR
@@ -27,7 +27,7 @@ if (php_sapi_name() !== 'cli') {
 if (count($argv) !== 3 || $argv[1] !== "new") {
     echo LOGO . PHP_EOL . PHP_EOL;
     echo VERSION . PHP_EOL . PHP_EOL;
-    echo "Usage" . PHP_EOL . PHP_EOL;
+    echo "Usage:" . PHP_EOL . "\t";
     echo ME . " new appname" . PHP_EOL;
     exit;
 }
