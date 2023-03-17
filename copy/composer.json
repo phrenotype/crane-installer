@@ -4,8 +4,8 @@
         "phpmailer/phpmailer": "*",
         "qorm/qorm" : "*",
         "crane/crane": "*",
-        "chase/helga": "*",
-        "chase/figleaf": "*",
-        "chase/safari" : "*"
+        "helga/helga": "*",
+        "figleaf/figleaf": "*",
+        "safari/safari" : "*"
     }
 }
