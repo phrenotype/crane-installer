@@ -1,7 +1,5 @@
 <?php
 
-// Routes for api calls
-
 /*
 
 $app->get("/api", [ApiController::class, 'method']);

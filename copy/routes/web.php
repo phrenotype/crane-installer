@@ -1,7 +1,5 @@
 <?php
 
-// Routes for regular web pages
-
 use controllers\web\PagesController;
 
 /*
