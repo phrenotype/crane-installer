@@ -70,7 +70,6 @@ if (isEmptyFolder($folder)) {
         copy(__DIR__ . "/../copy/qorm.config.php", "qorm.config.php");
         copy(__DIR__ . "/../copy/config.php", "config.php");
         copy(__DIR__ . "/../copy/.htaccess", ".htaccess");
-        copy(__DIR__ . "/../copy/.env", ".env");
         copy(__DIR__ . "/../copy/composer.json", "composer.json");
         copy(__DIR__ . "/../copy/index.php", "index.php");
 
